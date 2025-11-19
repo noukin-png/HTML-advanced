@@ -4,188 +4,188 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="img/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="header wrapper">
-      <a href="index.html">
-        <img src="img/logo.svg" alt="" >
-      </a>
+    <div id="header">
+      <h1><img src="img/logo.svg" alt=""></h1>
+      <div id="menu" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div class="nav-menu">
-      <nav class="nav-list wrapper">
-        <ul>
-          <li><a href="index.html">NEW</a></li>
-          <li><a href="index.html">COLUMN</a></li>
-          <li><a href="index.html">SERIES</a></li>
-          <li><a href="index.html">Q&A</a></li>
-          <li><a href="index.html">CONTACT</a></li>
-        </ul>
-      </nav>
-    </div>
+
+    <div id="mask"></div>
+
+    <nav id="nav">
+      <ul class="menu-tag">
+        <li><a href="index.html">PICK UP</a></li>
+        <li><a href="#feature">FEATURE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+
+      <ul class="sns">
+        <li><a href="index.html">Twitter</a></li>
+        <li><a href="index.html">facebook</a></li>
+        <li><a href="index.html">instagram</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <div class="picup-list wrapper">
-      <div class="picup">
-        <img src="img/pickup1.jpg" alt="">
-        <h3>タイトルテキストテキストテキストテキストテキストテキストテキスト</h3>
-        <div class="readmore">
-          <a href="index.html">READ MORE</a>
-        </div>
-      </div>
+    <div class="video">
+      <video src="img/video.mp4" autoplay muted loop></video>
+    </div>
 
-      <div class="picup">
-        <img src="img/pickup2.jpg" alt="">
-        <h3>タイトルテキストテキストテキストテキストテキストテキストテキスト</h3>
-        <div class="readmore">
-          <a href="index.html">READ MORE</a>
-        </div>
+    <div class="pick-up" id="pick-up">
+      <h1>PICK UP</h1>
 
-      </div>
-
-      <div class="picup">
-        <img src="img/pickup3.jpg" alt="">
-        <h3>タイトルテキストテキストテキストテキストテキストテキストテキスト</h3>
-        <div class="readmore">
-          <a href="index.html">READ MORE</a>
+      <div class="slider-wrapper">
+        <div class="swiper slick-area">
+           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/pickup1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup4.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup5.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup6.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup7.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup8.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pickup9.jpg" alt="">
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <section class="flex wrapper">
-      <div class="flex-item1">
-          <article class="content">
-            <a href="index.html"><h2>タイトルテキストテキストテキストテキストテキスト</h2></a>
-            <a href="index.html" class="time"><time datetime="2020-01-01">2020/01/01</time></a>
-            <a href="index.html">カテゴリ1</a>
-            <a href="index.html" ><img src="img/main1.jpg" alt=""></a>
-            <p class="content-text">本文テキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            <div class="readmore"><a href="index.html" >READ MORE</a></div>
-          </article>
-
-          <article class="content">
-            <a href="index.html"><h2>タイトルテキストテキストテキストテキストテキスト</h1></a>
-            <a href="index.html" class="time"><time datetime="2020-01-01">2020/01/01</time></a>
-            <a href="index.html">カテゴリ1</a>
-            <a href="index.html"><img src="img/main2.jpg" alt=""></a>
-            <p class="content-text">本文テキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            <div class="readmore"><a href="index.html" >READ MORE</a></div>
-          </article>
-
-          <article class="content">
-            <a href="index.html"><h2>タイトルテキストテキストテキストテキストテキスト</h1></a>
-            <a href="index.html" class="time"><time datetime="2020-01-01">2020/01/01</time></a>
-            <a href="index.html">カテゴリ1</a>
-            <a href="index.html"><img src="img/main3.jpg" alt=""></a>
-            <p class="content-text">本文テキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            <div class="readmore"><a href="index.html" >READ MORE</a></div>
-          </article>
-      </div>
-
-      <div class="flex-item2">
-        <article class="name">
-          <img src="img/author.jpg" alt="">
-          <h3>Name Name</h3>
-          <p class="name-text">プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        </article>
-
-        <article class="ranking">
-          <h3>Ranking</h3>
-          <div class="ranking-1">
-            <img src="img/ranking1.jpg" alt="">
-            <p class="ranking-text">タイトルテキストテキストテキストテキストテキストテキスト</p>
-          </div>
-
-          <div class="ranking-2">
-            <img src="img/ranking2.jpg" alt="">
-            <p class="ranking-text">タイトルテキストテキストテキストテキストテキストテキスト</p>
-          </div>
-
-          <div class="ranking-3">
-            <img src="img/ranking3.jpg" alt="">
-            <p class="ranking-text">タイトルテキストテキストテキストテキストテキストテキスト</p>
-          </div>
-        </article>
-
-        <div class="archive">
-          <h3>Archive</h3>
-          <ul>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-            <li><a href="index.html">XXXX年XX月(XX)</a></li>
-          </ul>
+  <div class="feature" id="feature">
+    <h1>FEATURE</h1>
+    <ul>
+      <li class="future-content">
+        <img src="img/feature1.jpg" alt="" id="fade">
+        <div class="text" >
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
         </div>
-      </div>
-    </section>
-
-    <footer>
-      <section class="footer wrapper">
-        <div class="about item">
-          <h3>About</h3>
-          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          <ul>
-            <li>
-              <a href="index.html">▶プロフィールの詳細</a>
-            </li>
-            <li>
-              <a href="index.html">▶お仕事の依頼</a>
-            </li>
-            <li>
-              <a href="index.html">▶お問い合わせ</a>
-            </li>
-          </ul>
+      </li>
+      <li class="future-content">
+        <img src="img/feature2.jpg" alt="" class="fade">
+        <div class="text">
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
         </div>
-
-        <div class="menu item">
-          <h3>Menu</h3>
-          <ul>
-            <li>
-              <a href="index.html">NEW</a>
-            </li>
-            <li>
-              <a href="index.html">GATEGORY</a>
-            </li>
-            <li>
-              <a href="index.html">COLUMN</a>
-            </li>
-            <li>
-              <a href="index.html">SERISE</a>
-            </li>
-            <li>
-              <a href="index.html">Q&A</a>
-            </li>
-          </ul>
+      </li>
+      <li class="future-content">
+        <img src="img/feature3.jpg" alt="" class="fade">
+        <div class="text">
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
         </div>
-
-        <div class="twitter item">
-          <h3>Twitter</h3>
-          <p><a href="https://x.com/home?lang=ja" target="_blank">Tweets by X</a></p>
+      </li>
+      <li class="future-content">
+        <img src="img/feature4.jpg" alt="" class="fade">
+        <div class="text">
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
         </div>
-
-      </section>
-
-      <div class="small wrapper">
-        <small>© Travel & Blog</small>
-      </div>
-    </footer>
+      </li>
+      <li class="future-content">
+        <img src="img/feature5.jpg" alt="" class="fade">
+        <div class="text">
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
+        </div>
+      </li>
+      <li class="future-content">
+        <img src="img/feature6.jpg" alt="" class="fade">
+        <div class="text">
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
+        </div>
+      </li>
+      <li class="future-content">
+        <img src="img/feature7.jpg" alt="" class="fade">
+        <div class="text">
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
+        </div>
+      </li>
+      <li class="future-content">
+        <img src="img/feature8.jpg" alt="" class="fade">
+        <div class="text">
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
+        </div>
+      </li>
+      <li class="future-content">
+        <img src="img/feature9.jpg" alt="" class="fade">
+        <div class="text">
+          <p>category</p>
+          <h5>テキストテキストテキストテキストテキストテキストテキストテキスト</h5>
+          <time datetime="XXXX-XX-XX">XXXX.XX.XX</time>
+        </div>
+      </li>
+    </ul>
+  </div>
   </main>
+
+  <footer>
+      <h1>CONTACT</h1>
+      <div class="contact" id="contact">
+      <div class="contact-text">
+        <p>テキストテキストテキスト</p>
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+
+      <div class="form">
+        <dl>
+          <dt>Name:</dt>
+          <dd><input type="text"></dd>
+          <dt>Mail</dt>
+          <dd><input type="email"></dd>
+          <dt>Message</dt>
+          <dd><textarea name="Message"></textarea></dd>
+        </dl>
+        <button>SEND</button>
+      </div>
+    </div> 
+
+    <div class="small">
+      <small>© Sneakers</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
