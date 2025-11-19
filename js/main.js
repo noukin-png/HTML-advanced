@@ -21,6 +21,13 @@
     btn.classList.remove(`active`);
   });
 
+    nav.addEventListener('click', () => {
+    nav.classList.remove('active');
+    mask.classList.remove('active');
+    btn.classList.remove(`active`);
+  });
+
+
 
   const swiper = new Swiper('.slick-area',{
     loop: true,
@@ -39,6 +46,4 @@
     fadeup.classList.add('fade-up');
   });
 
-
-observer.observe(fadeup);
 }
