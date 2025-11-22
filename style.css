@@ -1,35 +1,180 @@
 @charset "utf-8";
 
-body{
-  margin: 0;
-}
-ul{
-  list-style: none;
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+ul{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+li{
+  list-style: none;
+}
+
+video{
+  object-fit: cover;
+  width: 100%;
+}
+
+button{
+    border: 1px solid white;
+    color: white;
+    background: black;
+    width: 200px;
+    height: 50px;
+}
+
 
 img{
   max-width: 100%;
   display: block;
 }
 
-/* header */
+h2{
+  margin-bottom: 24px;
+  font-size: 36px;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 36px;
+  color: white;
+}
 
 #header{
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 44px;
+  padding: 20px 44px;
   position: fixed;
-  background: white;
   width: 100%;
+  background: white;
   z-index: 10;
 }
 
+#menu{
+  display: block;
+  position: fixed;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+span{
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: black;
+  z-index: 999;
+}
+
+span:nth-child(1){
+  top: 4px;
+}
+
+
+
+.menu-btn.active span:nth-child(1){
+  animation: rotateopen1 0.5s ease forwards;
+}
+
+@keyframes rotateopen1{
+  0%{
+    transform: translateY(0px) rotate(0deg);
+    background: #000;
+  }
+
+  100%{
+    transform: translateY(10px) rotate(315deg);
+    background: white;
+  }
+}
+
+span:nth-child(2){
+  top: 14px;
+}
+
+.menu-btn.active span:nth-child(2){
+  animation: fadeout 0.5s ease forwards;
+}
+
+@keyframes fadeout{
+  0%{
+    opacity: 1;
+    background: black;
+  }
+
+  80%{
+    opacity: 0;
+    background: white;
+  }
+
+  100%{
+    opacity: 0;
+    background: white;
+  }
+}
+
+
+span:nth-child(3){
+  bottom: 4px;
+}
+
+.menu-btn.active span:nth-child(3){
+  animation: rotateopen2 0.5s ease forwards;
+}
+
+@keyframes rotateopen2{
+  0%{
+    transform: translateY(0px) rotate(0deg);
+    background: black;
+  }
+
+
+  100%{
+    transform: translateY(-10px) rotate(-315deg);
+    background:white;
+  }
+}
+
+
 #mask{
   display: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  pointer-events: auto;
+
+}
+
+#mask.active{
+  display: block;
+  animation: maskfade 0.1s ease forwards;
+  z-index: 20;
+
+}
+
+@keyframes maskfade{
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
 }
 
 #nav{
@@ -38,9 +183,8 @@ img{
   height: 100vh;
   background: rgb(24, 24, 24);
   padding: 64px 20px;
-  z-index: 20;
   position: fixed;
-  opacity: 0;
+  top: 0;
   display: none;
 
   a{
@@ -72,17 +216,17 @@ img{
   }
 }
 
-
-
 #nav.active{
   display: block;
   animation: fadein 0.5s ease forwards;
+  z-index: 25;
+
 }
 
 @keyframes fadein{
   0%{
-    transform: translateX(-100px);
     opacity: 0;
+    transform: translateX(-100px);
   }
 
   80%{
@@ -90,137 +234,49 @@ img{
   }
 
   100%{
-    transform: translateX(0px);
-    opacity: 1
-}};
-
-
-#mask.active{
-  opacity: 1;
-  display: block;
-  z-index: 20;
-  background: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+
+
+
 
 h1{
   margin: 0;
 }
 
-#menu{
-  display: block;
-  position: fixed;
-  top: 25px;
-  right: 45px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  z-index: 9999;
-}
-
-
-span{
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  background: black;
-}
-
-span:nth-child(1){
-  top: 4px;
-}
-
-
-
-#menu.active span:nth-child(1){
-  animation: rotateopen1 0.5s ease forwards;
-}
-
-@keyframes rotateopen1{
-  0%{
-    transform: translateY(0px) rotate(0deg);
-    background: #000;
-  }
-
-  100%{
-    transform: translateY(10px) rotate(315deg);
-    background: #fff;
-  }
-}
-
-span:nth-child(2){
-  top: 14px;
-}
-
-#menu.active span:nth-child(2){
-  animation: fadeout 0.5s ease forwards;
-}
-
-@keyframes fadeout{
-  0%{
-    opacity: 1;
-  }
-
-  80%{
-    opacity: 0;
-  }
-
-  100%{
-    opacity: 0;
-  }
-}
-
-
-span:nth-child(3){
-  bottom: 4px;
-}
-
-#menu.active span:nth-child(3){
-  animation: rotateopen2 0.5s ease forwards;
-}
-
-@keyframes rotateopen2{
-  0%{
-    transform: translateY(0px) rotate(0deg);
-    background: black;
-  }
-
-
-  100%{
-    transform: translateY(-10px) rotate(-315deg);
-    background: white;
-  }
-}
 
 
 /* main */
 
 
-h1{
-  text-align: center;
-}
-
-.video video{
-  object-fit: cover;
-  width: 100%;
-}
-
-ul{
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-}
-
-.future{
+.feature{
   max-width: 1240px;
+  margin: 0 auto 60px;
+
+
+  ul{
+    padding: 12px 18px 0;
+  }
+}
+
+.content{
+  opacity: 0;
+  transition: all 1s ;
+}
+
+.content.wppear{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.fade-up{
+  transform: translateY(50px);
 }
 
 .future-content{
-  box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 9px rgba(0, 0, 0, .5);
 
   img{
     width: 100%;
@@ -247,20 +303,27 @@ ul{
   }
 
   p{
-    margin-top: 0;
+    margin-bottom: 20px;
   }
 
-  h5{
-    line-height: 20px;
-  }
+  .item{
+    padding: 30px;
 
-  .text{
-    padding: 32px;
+    .item-cat{
+      font-size: 0.8rem;
+    }
+
+    .item-text{
+      font-weight: bold;
+      font-size: 0.9rem;
+      line-height: 25px;
+    }
 
     time{
       display: inline-block;
       width: 100%;
       text-align: right;
+      font-size: 0.8rem;
     }
   }
 }
@@ -268,7 +331,8 @@ ul{
 footer{
   background: black;
   color: white;
-  padding: 64px 16px 10px;
+  padding: 60px 22px 10px;
+
 
 
 
@@ -276,13 +340,19 @@ footer{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    max-width: 1240px;
+
+
     .contact-text{
       width: 45%;
-    }
-  }
+      font-size: 0.9rem;
 
-  h1{
-    color: white;
+      p{
+        padding-bottom: 30px;
+        line-height: 25px;
+
+      }
+    }
   }
 
   .form{
@@ -290,13 +360,23 @@ footer{
 
     dl{
 
+      dt{
+        padding-top: 18px;
+        font-size: 0.9rem;
+
+          &:nth-child(1){
+          padding: 0;
+        }
+
+      }
+
       dd{
         margin: 0;
-        padding: 0;
+        padding: 2px 0 0;
 
         input{
           width: 100%;
-          height: 40px;
+          height: 45px;
         }
 
         textarea{
@@ -307,16 +387,18 @@ footer{
     }
 
     button{
-      border: 1px solid white;
-      color: white;
-      background: black;
-      width: 200px;
-      height: 50px;
+      margin-top: 18px;
     }
+    
   }
 
   .small{
     text-align: center;
+    padding-top: 60px;
+
+    small{
+      font-size: 0.75rem;
+    }
   }
 }
 
