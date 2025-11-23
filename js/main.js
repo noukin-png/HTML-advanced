@@ -43,6 +43,7 @@
   window.addEventListener('scroll', () => {
     fadeup.classList.add('fade-up');
   });
+
 }
 
 
@@ -63,5 +64,23 @@
   const contents = document.querySelectorAll(".content");  //監視する3つ物取得
   contents.forEach(content => {  //1つ1つバラバラにして
     Uearobservers.observe(content); //observe()でobserverに入ればtargetを監視対象内に
+  });
+}
+
+{
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener(`click`, (e) => {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      const targetsection = document.querySelector(href);
+      const sectiontop = targetsection.getBoundingClientRect().top;
+      const currentPos = window.scrollY;
+      const gap = 80;
+      const target = sectiontop + currentPos - gap;
+      window.scrollTo({
+        top: target, behavio: `smooth`,
+      });
+    });
   });
 }
